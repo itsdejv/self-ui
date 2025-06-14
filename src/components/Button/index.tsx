@@ -1,5 +1,5 @@
 const Index = () => {
-  return <button>button</button>;
+  return <button className='bg-blue-500'>button</button>;
 };
 
 export default Index;
