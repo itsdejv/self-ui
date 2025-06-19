@@ -1,11 +1,6 @@
-import type { StorybookConfig } from '@storybook/react-vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import type { StorybookConfig } from "@storybook/react-vite";
+import path from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -24,8 +19,8 @@ const config: StorybookConfig = {
     config.plugins?.push(
       /** @see https://github.com/aleclarson/vite-tsconfig-paths */
       tsconfigPaths({
-        projects: [path.resolve(path.dirname(__dirname), 'tsconfig.json')],
-      }),
+        projects: [path.resolve(path.dirname(__dirname), "tsconfig.json")],
+      })
     );
 
     return config;
